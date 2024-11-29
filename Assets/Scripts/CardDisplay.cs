@@ -71,8 +71,4 @@ public class CardDisplay : MonoBehaviour
         
     }
 
-    public void ShowBack()
-    {
-        backImage.SetActive(true);
-    }
 }

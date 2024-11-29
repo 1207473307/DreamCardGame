@@ -67,10 +67,13 @@ public class ActionCard
     public int id;
     public string cardName;
     public bool back;
+
+    public int playerid;
     public ActionCard(int _id, string _cardName)
     {
         this.id = _id;
         this.cardName = _cardName;
         this.back = false;
+        this.playerid = 0;
     }
 }

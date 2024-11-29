@@ -106,7 +106,8 @@ public class CardData : MonoBehaviour
 
     // 行动卡数据
     public List<ActionCard> GetActionCards()
-    {
+    {   
+        ActionCardList.Clear();
         ActionCardList.Add(new ActionCard(0, "密约"));
         ActionCardList.Add(new ActionCard(1, "取舍"));
         ActionCardList.Add(new ActionCard(2, "赠予"));
