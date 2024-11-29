@@ -1817,10 +1817,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmAudioSource: {fileID: 471874116}
   sfxAudioSource: {fileID: 1868049434}
-  bgm: {fileID: 0}
-  discardCardSfx: {fileID: 0}
-  distributeCardSfx: {fileID: 0}
-  buffSfx: {fileID: 0}
+  bgm: {fileID: 8300000, guid: 1914797188f8196459450102c573eb43, type: 3}
+  discardCardSfx: {fileID: 8300000, guid: 0f5488bdcc39a41469ba49af1e06029c, type: 3}
+  distributeCardSfx: {fileID: 8300000, guid: 84af74104afcf534584403aed2ac3ba5, type: 3}
+  buffSfx: {fileID: 8300000, guid: 873a421facb6bfa45882e0fba899e229, type: 3}
+  chooseActionCardSfx: {fileID: 8300000, guid: 72e357e04bdd27b4c890e0ba5064b9ee, type: 3}
+  chooseCardSfx: {fileID: 8300000, guid: f8abc29d2971df8439b6297ef204d92a, type: 3}
+  newbieSfx: {fileID: 8300000, guid: 43625f9090f151f4b9ab578316499f85, type: 3}
+  gameoverSfx: {fileID: 8300000, guid: 99d35f099b8368e42a444adc9752701e, type: 3}
 --- !u!4 &1349121141
 Transform:
   m_ObjectHideFlags: 0

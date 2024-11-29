@@ -5,10 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
 {
+    public static GameOverUI instance;
+
     private Animator animator;
     private bool isPlayAnim;//是否播放动画
     private bool isWin;//是否胜利
     private bool isLoss;//是否失败
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
