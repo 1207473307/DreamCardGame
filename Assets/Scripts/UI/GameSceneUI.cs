@@ -17,18 +17,20 @@ public class GameSceneUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))//按下esc时返回主页面
         {
             EnableMask();
         }
     }
 
+    //启动遮挡动画
     private void EnableMask()
     {
         isBack = true;
         animator.SetBool("isBack",isBack);
     }
 
+    //在动画关键帧中回到主页面
     private void BackToMainScene()
     {
             SceneManager.LoadScene(1);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EffectCard : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class EffectCard : MonoBehaviour
     private int enemyValue;//结算时敌方总共魅力值
     private int playerValue;//结算时玩家总共魅力值
 
+    public Image currentBuffImage;//当前buff图片
+    public Image currentBuffIcon;//当前buff图标
+
     //buff效果概率定义
     private float buff1_Probability = 0.31f;
     private float buff2_Probability = 0.14f;
@@ -20,6 +24,24 @@ public class EffectCard : MonoBehaviour
     private float buff5_Probability = 0.31f;
     private float buff6_Probability = 0.14f;
     private float buff7_Probability = 0.045f;
+
+    //buff图片
+    [SerializeField] private Image buff1_Image;
+    [SerializeField] private Image buff2_Image;
+    [SerializeField] private Image buff3_Image;
+    [SerializeField] private Image buff4_Image;
+    [SerializeField] private Image buff5_Image;
+    [SerializeField] private Image buff6_Image;
+    [SerializeField] private Image buff7_Image;
+
+    //buff图标
+    [SerializeField] private Image buff1_Icon;
+    [SerializeField] private Image buff2_Icon;
+    [SerializeField] private Image buff3_Icon;
+    [SerializeField] private Image buff4_Icon;
+    [SerializeField] private Image buff5_Icon;
+    [SerializeField] private Image buff6_Icon;
+    [SerializeField] private Image buff7_Icon;
 
     private void Awake()
     {
@@ -53,30 +75,44 @@ public class EffectCard : MonoBehaviour
         if(probability < buff1_Probability)
         {
             buff1();
+            currentBuffImage = buff1_Image;
+            currentBuffIcon = buff1_Icon;
         }
         else if(probability < buff1_Probability+buff2_Probability)
         {
             buff2();
+            currentBuffImage = buff2_Image;
+            currentBuffIcon = buff2_Icon;
         }
         else if(probability < buff1_Probability + buff2_Probability+buff3_Probability)
         {
             buff3();
+            currentBuffImage = buff3_Image;
+            currentBuffIcon = buff3_Icon;
         }
         else if(probability < buff1_Probability + buff2_Probability + buff3_Probability+buff4_Probability)
         {
             buff4();
+            currentBuffImage = buff4_Image;
+            currentBuffIcon = buff4_Icon;
         }
         else if (probability < buff1_Probability + buff2_Probability + buff3_Probability + buff4_Probability+buff5_Probability)
         {
             buff5();
+            currentBuffImage = buff5_Image;
+            currentBuffIcon = buff5_Icon;
         }
         else if (probability < buff1_Probability + buff2_Probability + buff3_Probability + buff4_Probability + buff5_Probability+buff6_Probability)
         {
             buff6();
+            currentBuffImage = buff6_Image;
+            currentBuffIcon = buff6_Icon;
         }
         else
         {
             buff7();
+            currentBuffImage = buff7_Image;
+            currentBuffIcon = buff7_Icon;
         }
 
     }
