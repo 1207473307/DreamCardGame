@@ -45,7 +45,7 @@ public class BlockSelect : MonoBehaviour, IPointerDownHandler
         }
     }
 
-    private void Select()
+    public void Select()
     {
         if (selectionIndicator != null)
         {

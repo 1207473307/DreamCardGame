@@ -663,7 +663,7 @@ public class GameManager : MonoSingleton<GameManager>
             {
                 Cal_Score();
                 ClearPool(BlockcardA);
-                currentPhase = GamePhase.enemyActionSelect;
+                currentPhase = GamePhase.enemyDraw;
                 phaseChangeEvent.Invoke();
 
                 if (pilePool.Count > 0)
@@ -683,7 +683,7 @@ public class GameManager : MonoSingleton<GameManager>
             {
                 Cal_Score();
                 ClearPool(BlockcardA);
-                currentPhase = GamePhase.enemyActionSelect;
+                currentPhase = GamePhase.enemyDraw;
                 phaseChangeEvent.Invoke();
 
                 if (pilePool.Count > 0)
@@ -721,10 +721,10 @@ public class GameManager : MonoSingleton<GameManager>
                 Cal_Score();
                 ClearPool(BlockcardD);
                 ClearPool(BlockcardB);
-                currentPhase = GamePhase.playerActionSelect;
+                currentPhase = GamePhase.playerDraw;
                 phaseChangeEvent.Invoke();
 
-                 if (pilePool.Count > 0)
+                if (pilePool.Count > 0)
                 {
                     DrawCard(0, 1);
                 }
@@ -748,7 +748,7 @@ public class GameManager : MonoSingleton<GameManager>
                 // BlockSelect.selectedBlock = null;
                 // BlockC1.GetComponent<BlockSelect>().selectionIndicator.gameObject.SetActive(false);
                 // BlockC2.GetComponent<BlockSelect>().selectionIndicator.gameObject.SetActive(false);
-                currentPhase = GamePhase.playerActionSelect;
+                currentPhase = GamePhase.playerDraw;
                 phaseChangeEvent.Invoke();
 
                 if (pilePool.Count > 0)
@@ -771,7 +771,7 @@ public class GameManager : MonoSingleton<GameManager>
             {
                 Cal_Score();
                 ClearPool(BlockcardB);
-                currentPhase = GamePhase.playerActionSelect;
+                currentPhase = GamePhase.playerDraw;
                 phaseChangeEvent.Invoke();
 
                 if (pilePool.Count > 0)
@@ -791,7 +791,7 @@ public class GameManager : MonoSingleton<GameManager>
             {
                 Cal_Score();
                 ClearPool(BlockcardB);
-                currentPhase = GamePhase.playerActionSelect;
+                currentPhase = GamePhase.playerDraw;
                 phaseChangeEvent.Invoke();
 
                 if (pilePool.Count > 0)
@@ -830,7 +830,7 @@ public class GameManager : MonoSingleton<GameManager>
                 Cal_Score();
                 ClearPool(BlockcardD);
                 ClearPool(BlockcardA);
-                currentPhase = GamePhase.enemyActionSelect;
+                currentPhase = GamePhase.enemyDraw;
                 phaseChangeEvent.Invoke();
 
                 if (pilePool.Count > 0)
@@ -858,7 +858,7 @@ public class GameManager : MonoSingleton<GameManager>
                 // BlockC2.GetComponent<BlockSelect>().selectionIndicator.gameObject.SetActive(false);
                 BlockC1.GetComponent<BlockSelect>().Reset();
                 BlockC2.GetComponent<BlockSelect>().Reset();
-                currentPhase = GamePhase.enemyActionSelect;
+                currentPhase = GamePhase.enemyDraw;
                 phaseChangeEvent.Invoke();
 
                 if (pilePool.Count > 0)
