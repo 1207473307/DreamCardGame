@@ -25,20 +25,23 @@ public class BlockSelect : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (selectedBlock == this) // 如果当前块已选中
+        if (GameManager.Instance.currentPhase == GamePhase.playerReAction3 || GameManager.Instance.currentPhase == GamePhase.enemyReAction3)
         {
-            Deselect();
-            selectedBlock = null;
-        }
-        else
-        {
-            if (selectedBlock != null) // 如果有其他块被选中，取消其选中状态
+            if (selectedBlock == this) // 如果当前块已选中
             {
-                selectedBlock.Deselect();
+                Deselect();
+                selectedBlock = null;
             }
+            else
+            {
+                if (selectedBlock != null) // 如果有其他块被选中，取消其选中状态
+                {
+                    selectedBlock.Deselect();
+                }
 
-            Select();
-            selectedBlock = this;
+                Select();
+                selectedBlock = this;
+            }
         }
     }
 
@@ -58,5 +61,12 @@ public class BlockSelect : MonoBehaviour, IPointerDownHandler
             selectionIndicator.color = normalColor; // 隐藏选中图标
         }
         Debug.Log($"BlockC{blockId} deselected");
+    }
+
+    public void Reset()
+    {
+        selectedBlock = null;
+        selectionIndicator.color = normalColor;
+        selectionIndicator.gameObject.SetActive(false);
     }
 }

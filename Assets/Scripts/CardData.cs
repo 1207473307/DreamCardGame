@@ -108,10 +108,10 @@ public class CardData : MonoBehaviour
     public List<ActionCard> GetActionCards()
     {   
         ActionCardList.Clear();
-        ActionCardList.Add(new ActionCard(0, "密约"));
-        ActionCardList.Add(new ActionCard(1, "取舍"));
-        ActionCardList.Add(new ActionCard(2, "赠予"));
-        ActionCardList.Add(new ActionCard(3, "竞争"));
+        ActionCardList.Add(new ActionCard(0, "梦隐"));
+        ActionCardList.Add(new ActionCard(1, "梦碎"));
+        ActionCardList.Add(new ActionCard(2, "梦华"));
+        ActionCardList.Add(new ActionCard(3, "梦凌"));
 
         return ActionCardList;
 

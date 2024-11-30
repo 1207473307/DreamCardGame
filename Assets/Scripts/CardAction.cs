@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public enum CardState //位置和所属状态
 {
-    inPlayerHand, inPlayerBlock, inEnemyHand, inEnemyBlock, inBlockC1, inBlockC2, People
+    inPlayerHand, inPlayerBlock, inEnemyHand, inEnemyBlock, inBlockC1, inBlockC2, inBlockD, People, inPile
 }
 
 public class CardAction : MonoBehaviour, IPointerDownHandler
@@ -33,6 +33,10 @@ public class CardAction : MonoBehaviour, IPointerDownHandler
         {
             GameManager.Instance.MoveRequestC(gameObject, 0);
         }
+        else if (GameManager.Instance.currentPhase == GamePhase.playerReAction2)
+        {
+            GameManager.Instance.MoveRequestD(gameObject, 0);
+        }
 
         if (GameManager.Instance.currentPhase == GamePhase.enemyAction0 || GameManager.Instance.currentPhase == GamePhase.enemyAction1 ||GameManager.Instance.currentPhase == GamePhase.enemyAction2)
         {
@@ -42,6 +46,10 @@ public class CardAction : MonoBehaviour, IPointerDownHandler
         else if (GameManager.Instance.currentPhase == GamePhase.enemyAction3)
         {
             GameManager.Instance.MoveRequestC(gameObject, 1);
+        }
+        else if (GameManager.Instance.currentPhase == GamePhase.enemyReAction2)
+        {
+            GameManager.Instance.MoveRequestD(gameObject, 1);
         }
 
 
